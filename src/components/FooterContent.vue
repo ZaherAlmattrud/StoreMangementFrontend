@@ -1,5 +1,9 @@
 <template>
-    <div class="text-muted py-4 shadow-sm">
+    <div class="text-muted py-1 shadow-sm">
+
+        <h1>{{ $t('title.config') }}</h1>
+    
+
         <div class="d-flex flex-column flex-md-row flex-lg-row justify-content-around align-items-center">
             <ul class="list-inline d-flex align-items-center p-0 m-0">
                 <li class="list-inline-item">
@@ -22,3 +26,15 @@
         </div>
     </div>
 </template>
+<script setup>
+
+import { watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { SUPPORT_LOCALES as supportLocales, setI18nLanguage } from '../i18n';
+
+const { locale } = useI18n({ useScope: 'global' });
+watch(locale, (val) => {
+  setI18nLanguage(val);
+});
+
+</script>

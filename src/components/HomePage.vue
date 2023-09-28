@@ -14,7 +14,7 @@
         </div>
         <div class="col-sm-12 col-md-4 col-xl-4 ">
             <div class="d-flex justify-content-center align-items-center">
-                <input v-model="search" class="mx-2 p-1 w-100" style="border: 1px solid #c2c2c2; border-radius: 5px;" type="text" placeholder="ابحث باسم المنتج" aria-label="بحث" />
+                <input v-model="search"  class="mx-2 p-1 w-100" style="border: 1px solid #c2c2c2; border-radius: 5px;" type="text" placeholder="ابحث باسم المنتج" aria-label="بحث" />
                 <a claas="btn btn-secondary m-0 " href="#"><font-awesome-icon icon="fa fa-search text-secondary h5 pt-1 px-2" /></a>
             </div>
         </div>

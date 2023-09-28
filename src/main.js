@@ -17,10 +17,12 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import i18n from './i18n';
 library.add(faUserSecret)
 library.add(fas, far, fab);
 
 const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
 app.use(router).use(store).use(VueAxios, axios).use(BootstrapVue3)
 app.component("vue3-star-ratings", vue3StarRatings);
+app.use(i18n())
 app.mount('#app')

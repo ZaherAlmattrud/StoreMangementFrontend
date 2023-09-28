@@ -7,11 +7,14 @@
                   <RouterLink v-if="!$store.state.isLogin" to="/login"><font-awesome-icon icon="fa-solid fa-right-to-bracket" /> تسجيل الدخول</RouterLink>
                   <RouterLink v-if="$store.state.isLogin"  @click="logOut" to="/"><font-awesome-icon icon="fa-solid fa-right-to-bracket " /> تسجيل الخروج</RouterLink>
                   <RouterLink v-if="$store.state.isLogin"  @click="openModalCart()" to="#" data-bs-toggle="modal" data-bs-target="#bayModal"><span class="badge rounded-pill bg-warning">{{ $store.state.cartCount }}</span><font-awesome-icon icon="fa-solid fa-cart-shopping text-danger" />سلة المشتريات</RouterLink>                  
-                  <RouterLink to="/about"><font-awesome-icon icon="fa-solid fa-circle-exclamation" /> حول</RouterLink>  
+                  <RouterLink to="/about"><font-awesome-icon icon="fa-solid fa-circle-exclamation" /> حول</RouterLink> 
+
                 </div>
                
             </div>
-        </div>
+        
+            </div>
+        
     </nav>
       
     <b-modal  id="bayModal" v-model="modalShow" size="xl" hide-header hide-footer>
@@ -73,7 +76,7 @@
             </div>
         </div>
   </b-modal>
-
+  
 </template>
 <style scoped>
     *{
@@ -90,9 +93,33 @@
         text-align: center;
         font-weight: 400;
     }
+
+    .gold-mid{
+
+background-color: #666666;
+
+}
+
+
+
+.gray-lighter{
+
+background-color: #c2c2c2;
+
+}
+
+
+ 
+
 </style>
 <script>
+
+
+
     export default{
+
+         
+
     data() {
         return {         
             modalShow: false,  
@@ -100,6 +127,8 @@
         };
     },
     methods: {
+
+   
         logOut() {
             this.$store.commit('loginStatus', false)
         },        
@@ -134,5 +163,8 @@
         this.loadCartItem()                     
     },
 }
+
+ 
+
 
 </script>
