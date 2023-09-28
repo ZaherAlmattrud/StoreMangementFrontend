@@ -21,6 +21,7 @@ import i18n from './i18n';
 library.add(faUserSecret)
 library.add(fas, far, fab);
 
+
 const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
 app.use(router).use(store).use(VueAxios, axios).use(BootstrapVue3)
 app.component("vue3-star-ratings", vue3StarRatings);
